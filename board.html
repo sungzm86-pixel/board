@@ -14,26 +14,29 @@
             <span>추천</span>
         </div>   
         <ol>
-            <li>
-                <span>43</span>
-                <span>첫글입니다</span>
-                <span>sidking</span>
-                <span>4</span>
-            </li>
-            <li>
-                <span>42</span>
+            
+            <script>
+                var posts=[
+                    {number:43 , title:'첫글입니다' , author:'sidking' , likes: 4} , 
+                    {number:42 , title:'안녕하세요' , author:'taemi' , likes: 42} , 
+                    {number:41 , title:'오늘 코딩 시작함' , author:'sira' , likes: 128} ,
+                    {number:40 , title:'테스트', author:'sidking', likes: 0}
+                ];
+                console.log(posts);
 
-                <span>안녕하세요</span>
-                <span>taemi</span>
-                <span>42</span>
-            </li>
-            <li>
-                <span>41</span>
+                var i = 0;
+                while(i < posts.length) {
+                    document.write('<li>');
+                  document.write('<span>' + posts[i].number + '</span>');
+                  document.write('<span>' + posts[i].title + '</span>');
+                  document.write('<span>' + posts[i].author + '</span>');
+                  document.write('<span>' + posts[i].likes + '</span>');
+                  document.write('</li>');
+                    i=1+i;
+                }
 
-                <span>오늘 코딩 시작함</span>
-                <span>sira</span>
-                <span>128</span>
-            </li>
+                
+            </script>
         </ol>
     </body>
 </html>
