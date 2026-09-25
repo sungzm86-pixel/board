@@ -1,8 +1,17 @@
 li {
     display: grid;
     grid-template-columns:100px 1fr 100px 100px;
+    border-bottom: 1px solid #ddd;
+    padding:10px 0;
  }
 
  ol{
     width: 800px;
+    padding-left:0;
+    margin:0;
  }
+.head{
+   display: grid;
+   grid-template-columns: 100px 1fr 100px 100px;
+   width:800px;
+}
