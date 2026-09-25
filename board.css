@@ -1,0 +1,8 @@
+li {
+    display: grid;
+    grid-template-columns:100px 1fr 100px 100px;
+ }
+
+ ol{
+    width: 800px;
+ }
