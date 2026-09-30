@@ -1,6 +1,6 @@
 li {
     display: grid;
-    grid-template-columns:100px 1fr 100px 100px;
+    grid-template-columns:100px 1fr 100px 100px 80px;
     border-bottom: 1px solid #ddd;
     padding:10px 0;
  }
@@ -12,6 +12,6 @@ li {
  }
 .head{
    display: grid;
-   grid-template-columns: 100px 1fr 100px 100px;
+   grid-template-columns: 100px 1fr 100px 100px 80px;
    width:800px;
 }

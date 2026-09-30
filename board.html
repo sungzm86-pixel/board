@@ -12,10 +12,13 @@
             <span>제목</span>
             <span>작성자</span>
             <span>추천</span>
+            <span></span> 
         </div>   
-        <ol>
+        <ol id="list">
             
-            <script>
+            
+        </ol>
+        <script>
                 var posts=[
                     {number:43 , title:'첫글입니다' , author:'sidking' , likes: 4} , 
                     {number:42 , title:'안녕하세요' , author:'taemi' , likes: 42} , 
@@ -24,19 +27,35 @@
                 ];
                 console.log(posts);
 
-                var i = 0;
-                while(i < posts.length) {
-                    document.write('<li>');
-                  document.write('<span>' + posts[i].number + '</span>');
-                  document.write('<span>' + posts[i].title + '</span>');
-                  document.write('<span>' + posts[i].author + '</span>');
-                  document.write('<span>' + posts[i].likes + '</span>');
-                  document.write('</li>');
+                function render (){
+                   var html = '';
+                   var i = 0;
+                   while (i< posts.length) {
+                    html= html + '<li>';
+                    html= html + '<span>'+ posts[i].number + '</span>';
+                  html= html + '<span>'+ posts[i].title + '</span>';
+                  html= html + '<span>'+ posts[i].author + '</span>';
+                  html= html + '<span>'+ posts[i].likes + '</span>';
+                  html = html + '<span>' + posts[i].likes + '</span>';
+                  html = html + '<span><button onclick="like(' + i + ')">추천</button></span>';
+
+                  html= html+'</li>';
                     i=1+i;
+
+                   }
+                   document.querySelector('#list').innerHTML = html;
+
                 }
 
+                render();
+
+                function like(index) {
+                posts[index].likes = posts[index].likes + 1;
+                render();
+                }
+                
+                
                 
             </script>
-        </ol>
     </body>
 </html>
